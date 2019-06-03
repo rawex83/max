@@ -1,0 +1,46 @@
+{% extends "modules/base.html" %}
+{% block head %}
+    {% include "component/head.html" %}
+{% endblock head %}
+
+{% block content %}
+    {% load static %}
+
+<body id="page-top">
+<!-- Navigation -->
+<nav class="navbar navbar-default">
+{% include "modules/aside/section/menu.html" %}
+</nav>
+
+<section id="portfolio">
+{% include "modules/aside/section/images.html" %}
+</section>
+
+<section id="about" class="mz-module">
+{% include "modules/aside/section/club.html" %}
+</section>
+
+<section id="team">
+    {% include "modules/aside/section/team.html" %}
+</section>
+
+<section id="contact">
+{% include "modules/aside/section/map.html" %}
+</section>
+<p id="back-top">
+    <a href="#top"><i class="fa fa-angle-up"></i></a>
+</p>
+<footer>
+    <div class="container text-center">
+        <p>Сделано <a href="http://vk.com/id133198667"><span>Максимом</span> Ивановым</a></p>
+    </div>
+</footer>
+
+{% include "modules/aside/section/models.html" %}
+
+{% endblock content %}
+
+
+{% block script %}
+    {% include "component/script.html" %}
+{% endblock script %}

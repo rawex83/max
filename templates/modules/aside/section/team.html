@@ -1,0 +1,52 @@
+{% load static %}
+<div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="section-title">
+                    <h2>Лучшие игроки</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- team member item -->
+            {% for team in teams %}
+            <div class="col-md-4">
+                <div class="team-item">
+                    <div class="team-image">
+                        <img src="{% static team.img %}" class="img-responsive" alt="author">
+                    </div>
+                    <div class="team-text">
+                        <h3>{{ team.name }}</h3>
+                        <div class="team-position">{{ team.position }}</div>
+                        <p>
+                            <span>
+                                Возраст: {{ team.age }}
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Рост: {{ team.rost }}
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Вес: {{ team.ves }}
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Хват клюшки {{ team.hvat}}
+                            </span>
+                        </p>
+                        <p>
+                            <span>
+                                Контракт: {{ team.contract}}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+    </div>
